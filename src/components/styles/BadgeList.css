@@ -1,0 +1,53 @@
+.BadgeList {
+    display: grid;
+    background: #eee;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: 
+    'avatar name'
+    'avatar  twitter'
+    'avatar jobTitle'
+    ;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.20);
+}
+.BadgeList__avatar, .BadgeList__jobTitle, .BadgeList__name, .BadgeList__twitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BadgeList__avatar {
+    grid-area: avatar;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.BadgeList__avatar img {
+    border-radius: 50%;
+}
+.BadgeList__name {
+    grid-area: name;
+    justify-content: flex-start;
+    margin-left: 15px;
+    align-items: flex-end;
+}
+.BadgeList__name h5 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.BadgeList__twitter {
+    grid-area: twitter;
+    justify-content: flex-start;
+    margin-left: 15px;
+    align-items: flex-end;
+
+}
+.BadgeList__twitter img {
+    width: 25px;
+}
+.BadgeList__jobTitle {
+    grid-area: jobTitle;
+    justify-content: flex-start;
+    margin-left: 15px;
+    align-items: flex-start;
+
+}

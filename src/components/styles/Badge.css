@@ -1,0 +1,44 @@
+.Badge {
+    height: 380px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'header header'
+    'avatar title'
+    'description description'
+    'footer footer'
+    ;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+.Badge__avatar, .Badge__description, .Badge__footer, .Badge__header, .Badge__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Badge__header{
+    grid-area: header;
+    background: darkslateblue;
+}
+.Badge__avatar{
+    grid-area: avatar;
+    justify-content: flex-end;
+    margin: 15px;
+}
+.Badge__avatar--image img{
+    width: 120px;
+    border-radius: 50%;
+}
+.Badge__title{
+    grid-area: title;
+    justify-content: flex-start;
+}
+.Badge__description{
+    grid-area: description;
+    flex-direction: column;
+    background: lightgray;
+    padding: 10px;
+}
+.Badge__footer{
+    grid-area: footer;
+}
